@@ -1,15 +1,15 @@
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config(); 
 const express = require('express');
-const path = require('path'); // For handling the views folder
+const path = require('path'); 
 const axios = require('axios');
 
 const app = express();
 const port = 3000;
 
 // Set the views folder location
-app.set('views', path.join(__dirname, 'views')); // Ensure 'views' is set properly
-app.set('view engine', 'pug'); // Use Pug as the template engine
-app.use(express.urlencoded({ extended: true })); // Middleware for parsing form data
+app.set('views', path.join(__dirname, 'views')); 
+app.set('view engine', 'pug'); 
+app.use(express.urlencoded({ extended: true })); 
 app.use(express.static('public')); // Static files (like CSS/JS)
 
 // Home route - Displays the custom object data

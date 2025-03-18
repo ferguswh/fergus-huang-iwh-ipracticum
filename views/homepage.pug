@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Custom Object Records
+    a(href='/update-cobj') Add to this table
+    table(border="1")
+      tr
+        th Email
+        th First Name
+        th Last Name
+        th Age
+        th Bio
+      each obj in data
+        tr
+          td= obj.properties.email
+          td= obj.properties.firstname
+          td= obj.properties.lastname
+          td= obj.properties.age
+          td= obj.properties.bio

@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Add a new Custom Object
+    form(method='POST', action='/update-cobj')
+      label(for='email') Email:
+      input(type='text', name='email', placeholder='Enter email')
+
+      label(for='firstname') First Name:
+      input(type='text', name='firstname', placeholder='Enter first name')
+
+      label(for='lastname') Last Name:
+      input(type='text', name='lastname', placeholder='Enter last name')
+
+      label(for='age') Age:
+      input(type='text', name='age', placeholder='Enter age')
+
+      label(for='bio') Bio:
+      input(type='text', name='bio', placeholder='Enter bio')
+
+      button(type='submit') Submit
+    a(href='/') Return to the homepage
